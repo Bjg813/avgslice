@@ -1,4 +1,4 @@
-// Package datafile allows reading data samples from files.
+// Package datafile reads data.txt files and then converts strings into float64 utilizing the slice append function.
 package datafile
 
 import (

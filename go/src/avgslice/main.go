@@ -1,4 +1,4 @@
-// Average calculates the average of several numbers.
+// Package avgslice calculates the average of several numbers by reading a data.txt file and using a slice append instead of a fixed array.
 package main
 
 import (
