@@ -13,14 +13,14 @@ func GetFloats(fileName string) ([]float64, error) {
 	var numbers []float64
 	file, err := os.Open(fileName)
 	if err != nil {
-		return numbers, err
+		return nil, err
 	}
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		// Convert the file line string to a float64.
 		number, err := strconv.ParseFloat(scanner.Text(), 64)
 		if err != nil {
-			return numbers, err
+			return nil, err
 		}
 		numbers = append(numbers, number)
 	}
@@ -31,5 +31,5 @@ func GetFloats(fileName string) ([]float64, error) {
 	if scanner.Err() != nil {
 		return numbers, scanner.Err()
 	}
-	return numbers, nil
+	return nil, nil
 }
